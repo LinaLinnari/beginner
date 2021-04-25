@@ -1,8 +1,10 @@
-# lesson 21
-a = 0
-while True:
-    a += 0.1
-   # print(a)#
-    if (a >= 1) :
-        exit(0)
-    print('hhhhhhhh')
+# bot
+
+print('Hello! My name is Aid.')
+print('I was created in 2020.')
+print('Please, remind me your name.')
+
+your_name = input('>')
+print('What a great name you have,', your_name + '!')
+
+
