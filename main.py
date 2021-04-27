@@ -51,7 +51,40 @@
 
 # print(2 ** 3 % 20)
 
-truthy_integer = False or False and True
-print(truthy_integer)
-tricky = not 10
-print(tricky)
+# truthy_integer = False or False and True
+# print(truthy_integer)
+# tricky = not 10
+# print(tricky)
+# a = int(input('>'))
+# b = int(input('>'))
+# c = int(input('>'))
+# r = a < b < c
+# print(r)
+# number_of_halls = int(input())
+# capacity = int(input())
+# number_of_viewers = int(input())
+# visit = (number_of_halls * capacity) >= number_of_viewers
+# print(visit)
+# a = int(input())
+# b = int(input())
+# if (a / b) % 2 == 1:
+#     print(True)
+# else:
+#     print(False)
+pasta = "tomato, basil, garlic, salt, pasta, olive oil"
+apple_pie = "apple, sugar, salt, cinnamon, flour, egg, butter"
+ratatouille = "aubergine, carrot, onion, tomato, garlic, olive oil, pepper, salt"
+chocolate_cake = "chocolate, sugar, salt, flour, coffee, butter"
+omelette = "egg, milk, bacon, tomato, salt, pepper"
+ingri = input()
+if ingri in pasta:
+    print("pasta time!")
+if ingri in apple_pie:
+    print("apple pie time!")
+if ingri in ratatouille:
+    print("ratatouille time!")
+if ingri in chocolate_cake:
+    print("chocolate cake time!")
+if ingri in omelette:
+    print("omelette time!")
+
