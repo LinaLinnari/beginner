@@ -71,20 +71,42 @@
 #     print(True)
 # else:
 #     print(False)
-pasta = "tomato, basil, garlic, salt, pasta, olive oil"
-apple_pie = "apple, sugar, salt, cinnamon, flour, egg, butter"
-ratatouille = "aubergine, carrot, onion, tomato, garlic, olive oil, pepper, salt"
-chocolate_cake = "chocolate, sugar, salt, flour, coffee, butter"
-omelette = "egg, milk, bacon, tomato, salt, pepper"
-ingri = input()
-if ingri in pasta:
-    print("pasta time!")
-if ingri in apple_pie:
-    print("apple pie time!")
-if ingri in ratatouille:
-    print("ratatouille time!")
-if ingri in chocolate_cake:
-    print("chocolate cake time!")
-if ingri in omelette:
-    print("omelette time!")
+# pasta = "tomato, basil, garlic, salt, pasta, olive oil"
+# apple_pie = "apple, sugar, salt, cinnamon, flour, egg, butter"
+# ratatouille = "aubergine, carrot, onion, tomato, garlic, olive oil, pepper, salt"
+# chocolate_cake = "chocolate, sugar, salt, flour, coffee, butter"
+# omelette = "egg, milk, bacon, tomato, salt, pepper"
+# ingri = input()
+# if ingri in pasta:
+#     print("pasta time!")
+# if ingri in apple_pie:
+#     print("apple pie time!")
+# if ingri in ratatouille:
+#     print("ratatouille time!")
+# if ingri in chocolate_cake:
+#     print("chocolate cake time!")
+# if ingri in omelette:
+#     print("omelette time!")
+# amount = 1000
+# interest_rate = 5
+# years = 1
+# a = (1000 / 100 ) * 5
+# income = a
+# print(income)
+# counter = 0
+# step = 0
+# while counter <= 25:
+#     counter += 3
+#     step += 1
+# print(counter)
+# print(step)
+initial_quantity_of_atoms = int(input())
+final_quantity = int(input())
+periods = 0
+while initial_quantity_of_atoms > final_quantity:
+    initial_quantity_of_atoms //= 2
+    periods += 1
+print(periods * 12)
+
+
 
