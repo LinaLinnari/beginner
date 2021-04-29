@@ -100,13 +100,30 @@
 #     step += 1
 # print(counter)
 # print(step)
-initial_quantity_of_atoms = int(input())
-final_quantity = int(input())
-periods = 0
-while initial_quantity_of_atoms > final_quantity:
-    initial_quantity_of_atoms //= 2
-    periods += 1
-print(periods * 12)
-
-
-
+# initial_quantity_of_atoms = int(input())
+# final_quantity = int(input())
+# periods = 0
+# while initial_quantity_of_atoms > final_quantity:
+#     initial_quantity_of_atoms //= 2     #initial_quantity_of_atoms = initial_quantity_of_atoms // 2
+#     periods += 1
+# print(periods * 12)
+# sum_d = int(input())
+# years = 0
+# while sum_d < 700000:
+#     sum_d = ((sum_d / 100 * 7.1) + sum_d)
+#     years += 1
+# print(years)
+# i = 1
+# while i <= 20:
+#     if i == 1:
+#         print(i)
+#     else:
+#         j = i * i
+#         print(j)
+#     i += 1
+i = 0
+a = 'a'
+while i < 8:
+    a *= 2
+    i += 1
+print (len (a))
