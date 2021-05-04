@@ -121,9 +121,97 @@
 #         j = i * i
 #         print(j)
 #     i += 1
-i = 0
-a = 'a'
-while i < 8:
-    a *= 2
-    i += 1
-print (len (a))
+# i = 0
+# a = 'a'
+# while i < 8:
+#     a *= 2
+#     i += 1
+# print (len (a))
+# print('Hello! My name is Aid.')
+# print('I was created in 2020.')
+# print('Please, remind me your name.')
+#
+# name = input()
+#
+# print('What a great name you have, ' + name + '!')
+# print('Let me guess your age.')
+# print('Enter remainders of dividing your age by 3, 5 and 7.')
+#
+# rem3 = int(input())
+# rem5 = int(input())
+# rem7 = int(input())
+#
+# age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
+#
+# print("Your age is " + str(age) + "; that's a good time to start programming!")
+# print('Now I will prove to you that I can count to any number you want.')
+# number = int(input('>'))
+# s = 0
+# while s <= number:
+#    print(str(s) + "!")
+#    s += 1
+# print('Completed, have a nice day!')
+# hidden = list(input())
+# print(len(hidden))
+# name = ['Helen']
+# print(name)
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# s = 4 * (a + b + c)
+# Ss = 2 * (a * b + b * c + a * c)
+# V = a * b * c
+# print(s)
+# print(Ss)
+# print(V)
+# a = int(input())
+# if a > 0:
+#     print(True)
+# else:
+#     print(False)
+# jack_age = int(input())
+# alex_age = int(input())
+# lana_age = int(input())
+# print(min(jack_age, alex_age, lana_age))
+# string = input()
+# print(len(string))
+# x = int(input())
+# y = int(input())
+# print(sum((x, y)))
+# name = input()
+# print("Hello, world! Hello, " + name)
+# def fahrenheit_to_celsius(fahrenheit):
+#     celsius = (fahrenheit - 32) * 5 / 9
+#     return round(celsius, 3)
+#
+#
+# c = fahrenheit_to_celsius(120)
+#
+# print(c)
+#
+#
+# def closest_higher_mod_5(x):
+#     step = 0
+#     remainder = x % 5
+#     if remainder == 0:
+#         return x
+#     else:
+#         while remainder % 5 != 0:
+#             remainder += 1
+#             step += 1
+#     return x + step
+#
+#
+# def closest_higher_mod_5(x):
+#     remainder = x % 5
+#     if remainder == 0:
+#         return x
+#     return x + (5 - remainder)
+
+
+# print(closest_higher_mod_5(4))
+n = int(input())
+value = ((n + 1) * n + 2) * n + 3
+print(value)
+
+
