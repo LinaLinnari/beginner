@@ -210,8 +210,115 @@
 
 
 # print(closest_higher_mod_5(4))
-n = int(input())
-value = ((n + 1) * n + 2) * n + 3
-print(value)
+# n = int(input())
+# value = ((n + 1) * n + 2) * n + 3
+# print(value)
+# a = int(input())
+# b = int(input())
+# if a < b:
+#     print(b)
+#     # print('\n')
+#     print(a)
+# else:
+#     print(a)
+#     print(b)
+# dictionary = ["aa", "abab", "aac", "ba", "bac", "baba", "cac", "caac"]
+# word = str(input())
+# if word in dictionary:
+#     print('Correct')
+# else:
+#     print('Incorrect')
+# year = int(input())
+# if year % 4 == 0 and year % 100 != 0:
+#     print('Leap')
+# else:
+#     if year % 400 != 0:
+#         print('Ordinary')
+#     else:
+#         print('Leap')
+# rec_sleep = int(input())
+# max_sleep = int(input())
+# act_sleep = int(input())
+#
+# if rec_sleep <= act_sleep <= max_sleep:
+#     print("Normal")
+# else:
+#     print("Excess" if act_sleep >= max_sleep else "Deficiency")
+# hours_min = int(input())
+# hours_max = int(input())
+# hours_ann = int(input())
+# if hours_ann < hours_min:
+#     print("Deficiency")
+# elif hours_ann <= hours_max:
+#     print("Normal")
+# else:
+#     print("Excess")
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# if a + b + c == 180:
+#     print('The triangle is valid!')
+# else:
+#     print('The triangle is not valid!')
+# word1 = input()
+# word2 = input()
+# print(len(word1) if len(word1) > len(word2) else len(word2))
+def greet(bot_name, birth_year):
+    print('Hello! My name is ' + bot_name + '.')
+    print('I was created in ' + birth_year + '.')
 
 
+def remind_name():
+    print('Please, remind me your name.')
+    name = input()
+    print('What a great name you have, ' + name + '!')
+
+
+def guess_age():
+    print('Let me guess your age.')
+    print('Enter remainders of dividing your age by 3, 5 and 7.')
+
+    rem3 = int(input())
+    rem5 = int(input())
+    rem7 = int(input())
+    age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
+    print("Your age is " + str(age) + "; that's a good time to start programming!")
+
+
+def count():
+    print('Now I will prove to you that I can count to any number you want.')
+
+    num = int(input())
+    curr = 0
+    while curr <= num:
+        print(curr, '!')
+        curr = curr + 1
+
+
+def test():
+    print("Let's test your programming knowledge.")
+    print('Why do we use methods?')
+    print('1. To repeat a statement multiple times.')
+    print('2. To decompose a program into several small subroutines.')
+    print('3. To determine the execution time of a program.')
+    print('4. To interrupt the execution of a program.')
+    not_correct = True
+    while not_correct:
+        answer = int(input('>'))
+        if answer == 2:
+            print('Completed, have a nice day!')
+            not_correct = False
+        else:
+            print('Please, try again.')
+
+
+def end():
+    print('Congratulations, have a nice day!')
+
+
+greet('Aid', '2020')  # change it as you need
+remind_name()
+guess_age()
+count()
+test()
+end()
