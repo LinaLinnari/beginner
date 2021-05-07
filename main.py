@@ -325,5 +325,17 @@
 # n = 2.777
 # print(str(float(int(n))))
 
-a = input()
-print(list(a))
+# a = input()
+# print(list(a))
+
+
+def display_the_grid(user_input):
+    print('---------')
+    print("|", user_input[0],  user_input[1], user_input[2], '|')
+    print("|", user_input[3],  user_input[4],  user_input[5], '|')
+    print("|", user_input[6],  user_input[7],  user_input[8], '|')
+    print('---------')
+
+
+user_input = input('Enter cells:')
+display_the_grid(user_input)
