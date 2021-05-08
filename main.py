@@ -328,14 +328,45 @@
 # a = input()
 # print(list(a))
 
+#
+# def display_the_grid(user_input):
+#     print('---------')
+#     print("|", user_input[0],  user_input[1], user_input[2], '|')
+#     print("|", user_input[3],  user_input[4],  user_input[5], '|')
+#     print("|", user_input[6],  user_input[7],  user_input[8], '|')
+#     print('---------')
+#
+#
+# user_input = input('Enter cells:')
+# display_the
+# a = int(input())
+# print(10 > a or a > 250)
+# age = int(input())
+# if age <= 16:
+#     print("Lion King")
+# elif 17 <= age <= 25:
+#     print('Trainspotting')
+# elif 26 <= age <= 40:
+#     print('Matrix')
+# elif 41 <= age <= 60:
+#     print('Pulp Fiction')
+# elif age >= 60:
+#     print("Breakfast at Tiffany's")
 
-def display_the_grid(user_input):
-    print('---------')
-    print("|", user_input[0],  user_input[1], user_input[2], '|')
-    print("|", user_input[3],  user_input[4],  user_input[5], '|')
-    print("|", user_input[6],  user_input[7],  user_input[8], '|')
-    print('---------')
+# pizza = "Margherita, Four Seasons, Neapolitan, Vegetarian, Spicy"
+# salad = "Caesar salad, Green salad, Tuna salad, Fruit salad"
+# soup = "Chicken soup, Ramen, Tomato soup, Mushroom cream soup"
+# dish = input()
+# menu = "pizza, salad, soup "
+# if dish in menu:
+#     if dish == 'pizza':
+#         print(pizza)
+#     elif dish == "salad":
+#         print(salad)
+#     elif dish == "soup":
+#         print(soup)
+# else:
+#     print("Sorry, we don't have it in the menu")
 
 
-user_input = input('Enter cells:')
-display_the_grid(user_input)
+
