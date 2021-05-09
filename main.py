@@ -367,6 +367,118 @@
 #         print(soup)
 # else:
 #     print("Sorry, we don't have it in the menu")
-
-
-
+#
+# def check_pay(money, korzina):
+#     prev = 0
+#     prev_key = ''
+#     ostatok = 0
+#     for key in animals:
+#         # print(key, animals.get(key))
+#         if animals.get(key) < money:
+#             prev_key = key
+#             prev = animals.get(key)
+#             continue
+#         else:
+#             ostatok = money - prev
+#             korzina. += 1
+#             break
+#     return ostatok
+#
+# player_money = int(input('>'))
+# animals = {'Chicken': 23, 'Goat': 678, 'Pig': 1296, 'Cow': 3848, 'Sheep': 6769}
+# korzina = {}
+#
+# while(player_money > 0):
+#     player_money = check_pay(player_money, korzina)
+#
+#
+# print(korzina)
+# money = int(input())
+# animals = {'sheep': 6769, 'cow': 3848, 'pig': 1296, 'goat': 678, 'chicken': 23}
+# for key, values in animals.items():
+#     if money >= values:
+#         x = money // values
+#         if key == 'sheep':
+#             print(f"{x} sheep")
+#         elif x == 1:
+#             print(f"1 {key}")
+#         else:
+#             print(f"{x} {key}s")
+#         break
+#     elif money < animals['chicken']:
+#         print("None")
+#         break
+#
+# money = int(input())
+#
+# p_chicken = 23
+# p_goat = 678
+# p_pig = 1296
+# p_cow = 3848
+# p_sheep = 6769
+#
+# if money < p_chicken:
+#     print("None")
+# elif money < p_goat:
+#     print(f"{money // p_chicken} chicken{'s' if money // p_chicken > 1 else ''}")
+# elif money < p_pig:
+#     print(f"{money // p_goat} goat{'s' if money // p_goat > 1 else ''}")
+# elif money < p_cow:
+#     print(f"{money // p_pig} pig{'s' if money // p_pig > 1 else ''}")
+# elif money < p_sheep:
+#     print(f"{money // p_cow} cow{'s' if money // p_cow > 1 else ''}")
+# else:
+#     print(f"{money // p_sheep} sheep}
+# money = int(input())
+# n = 0
+#
+# if money < 23:
+#     print("None")
+#
+# elif money < 678:
+#     n = money // 23
+#     print(n, "chicken" if n == 1 else "chickens")
+#
+# elif money < 1296:
+#     n = money // 678
+#     print(n, "goat" if n == 1 else "goats")
+#
+# elif money < 3848:
+#     n = money // 1296
+#     print(n, "pig" if n == 1 else "pigs")
+#
+# elif money < 6769:
+#     n = money // 3848
+#     print(n, "cow" if n == 1 else "cows")
+#
+# else:
+#     n = money // 6769
+#     print(n, "sheep"
+# money = int(input())
+# animals = ['chicken', 'goat', 'pig', 'cow', 'sheep']
+# animals_plural = ['chickens', 'goats', 'pigs', 'cows', 'sheep']
+# prices = [23, 678, 1296, 3848, 6769]
+# i = 4
+# while (money // prices[i] == 0) and (i >= 0):
+#     i -= 1
+# if i < 0:
+#     print('None')
+# elif money // prices[i] == 1:
+#     print(money // prices[i], animals[i])
+# else:
+#     print(money // prices[i], animals_plural[i]
+# a = int(input())
+# print(10 > a or a > 250)
+score = int(input())
+maximum = int(input())
+percentages_are_as_follows = (score * 100) / maximum
+if percentages_are_as_follows < 60:
+    print("F")
+elif 60 <= percentages_are_as_follows < 70:
+    print('D')
+elif 70 <= percentages_are_as_follows < 80:
+    print('C')
+elif 80 <= percentages_are_as_follows < 90:
+    print('B')
+elif 90 <= percentages_are_as_follows < 100:
+    print('A')
