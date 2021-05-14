@@ -42,17 +42,73 @@
 #     else:
 #         print(number)
 ###############################
+#
+# a = int(input())
+# b = int(input())
+# counter = 0
+# summ = 0
+# for i in range(a, b + 1):
+#     if i % 3 == 0:
+#         summ += i
+#         counter += 1
+# print(summ / counter)
+##################################
+# numbers = {'0': "zero", '1': "one", '2': "two", '3': "three", '4': "four", '5': "five", '6': "six", '7': "seven", '8': "eight", '9': "nine"}
+# tele = input()
+#
+# for char in tele:
+#     print(numbers[char])
+######################
+# number = input()
+# words = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+#
+# for n in number:
+#     print(words[int(n)])
+########################
 
-a = int(input())
-b = int(input())
-counter = 0
-summ = 0
-for i in range(a, b + 1):
-    if i % 3 == 0:
-        summ += i
-        counter += 1
-print(summ / counter)
+# def romrob(num):
+#     if num % 7 == 0:
+#         print(num * num)
+#
+#
+# inputs = int(input())
+#
+# for _ in range(0, inputs):
+#     n = int(input())
+#     romrob(n)
+#######################
+a = float(input())
+b = float(input())
+operations = input()
 
+if operations in ('+', '-', '*', '/', "mod", "pow", "div"):
 
+    if operations == '+':
+        print('%.2f + %.2f = %.2f' % (a, b, a + b))
 
+    elif operations == '-':
+        print('%.2f - %.2f = %.2f' % (a, b, a - b))
 
+    elif operations == '*':
+        print('%.2f * %.2f = %.2f' % (a, b, a * b))
+
+    elif operations == '/':
+        if b != 0:
+            print('%.2f / %.2f = %.2f' % (a, b, a / b))
+        else:
+            print("Division by 0!")
+    elif operations == 'mod':
+        if b != 0:
+            print('%.2f mod %.2f = %.2f' % (a, b, a % b))
+        else:
+            print("Division by 0!")
+    elif operations == 'pow':
+        if b != 0:
+            print('%.2f pow %.2f = %.2f' % (a, b, a ** b))
+        else:
+            print("Division by 0!")
+    elif operations == 'div':
+        if b != 0:
+            print('%.2f div %.2f = %.2f' % (a, b, a // b))
+        else:
+            print("Division by 0!")
