@@ -77,38 +77,57 @@
 #     n = int(input())
 #     romrob(n)
 #######################
-a = float(input())
-b = float(input())
-operations = input()
+# a = float(input())
+# b = float(input())
+# operations = input()
+#
+# if operations in ('+', '-', '*', '/', "mod", "pow", "div"):
+#
+#     if operations == '+':
+#         print('%.2f + %.2f = %.2f' % (a, b, a + b))
+#
+#     elif operations == '-':
+#         print('%.2f - %.2f = %.2f' % (a, b, a - b))
+#
+#     elif operations == '*':
+#         print('%.2f * %.2f = %.2f' % (a, b, a * b))
+#
+#     elif operations == '/':
+#         if b != 0:
+#             print('%.2f / %.2f = %.2f' % (a, b, a / b))
+#         else:
+#             print("Division by 0!")
+#     elif operations == 'mod':
+#         if b != 0:
+#             print('%.2f mod %.2f = %.2f' % (a, b, a % b))
+#         else:
+#             print("Division by 0!")
+#     elif operations == 'pow':
+#         if b != 0:
+#             print('%.2f pow %.2f = %.2f' % (a, b, a ** b))
+#         else:
+#             print("Division by 0!")
+#     elif operations == 'div':
+#         if b != 0:
+#             print('%.2f div %.2f = %.2f' % (a, b, a // b))
+#         else:
+#             print("Division by 0!")
+####################################
 
-if operations in ('+', '-', '*', '/', "mod", "pow", "div"):
-
-    if operations == '+':
-        print('%.2f + %.2f = %.2f' % (a, b, a + b))
-
-    elif operations == '-':
-        print('%.2f - %.2f = %.2f' % (a, b, a - b))
-
-    elif operations == '*':
-        print('%.2f * %.2f = %.2f' % (a, b, a * b))
-
-    elif operations == '/':
-        if b != 0:
-            print('%.2f / %.2f = %.2f' % (a, b, a / b))
-        else:
-            print("Division by 0!")
-    elif operations == 'mod':
-        if b != 0:
-            print('%.2f mod %.2f = %.2f' % (a, b, a % b))
-        else:
-            print("Division by 0!")
-    elif operations == 'pow':
-        if b != 0:
-            print('%.2f pow %.2f = %.2f' % (a, b, a ** b))
-        else:
-            print("Division by 0!")
-    elif operations == 'div':
-        if b != 0:
-            print('%.2f div %.2f = %.2f' % (a, b, a // b))
-        else:
-            print("Division by 0!")
+# def snake_case(j):
+#     out = []
+#     step = 0
+#     for i in j:
+#         if i.isupper() and step == 0:
+#             out.append(i.lower())
+#         elif i.isupper():
+#             out.append('_')
+#             out.append(i.lower())
+#         else:
+#             out.append(i)
+#         step += 1
+#     return ''.join(out)
+#
+#
+# s = input()
+# print(snake_case(s))
