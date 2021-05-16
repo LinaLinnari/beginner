@@ -131,3 +131,38 @@
 #
 # s = input()
 # print(snake_case(s))
+########################################################
+# nums = [x * 2 for x in range(11) if x % 2 == 1]
+# print(nums)
+# work with a list from this variable
+##########################
+# numbers = [int(n) for n in input()]
+# less_than_5 = [x for x in numbers if x < 5]
+# greater_than_5 = [x for x in numbers if x > 5]
+# print(less_than_5)
+# print(greater_than_5)
+#################################
+# words = ["apple", "it", "creek", "pelican", "subsequent", "horse",
+#          "apothecary"]
+#
+# wordslen = [len(word) for word in words]
+#
+# print(wordslen)
+###########################
+# list_of_strings =['10', '100', '1000', '10000']
+# list_of_stringsn = [int(num) + 1 for num in list_of_strings]
+# print(list_of_stringsn)
+########################
+# sm: int = 0
+#
+#
+# def my_summ(n):
+#     sm += n
+#     return sm
+
+
+a = [1, 2, 3]
+b = [a[0] + (a[1] + item) for num, item in enumerate(a)]
+
+
+print(b)
