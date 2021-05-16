@@ -153,16 +153,24 @@
 # list_of_stringsn = [int(num) + 1 for num in list_of_strings]
 # print(list_of_stringsn)
 ########################
-# sm: int = 0
+# n = input()
+# n_int = [int(x) for x in n]
 #
+# result = []
+# number = 0
 #
-# def my_summ(n):
-#     sm += n
-#     return sm
-
-
-a = [1, 2, 3]
-b = [a[0] + (a[1] + item) for num, item in enumerate(a)]
-
-
-print(b)
+# for i in n_int:
+#     number += i
+#     result.append(number)
+# else:
+#     print(result)
+# ##
+# numbers = [int(x) for x in input()]
+# for index in range(1, len(numbers)):
+#     numbers[index] += numbers[index - 1]
+#
+# print(numbers)
+# ##
+# n = [int(x) for x in input()]
+# print([sum(n[0:x + 1]) if x >= 1 else n[0] for x in range(len(n))])
+# ###################################
