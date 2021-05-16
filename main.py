@@ -1,5 +1,15 @@
-data = [1, 2, 3, 4, 1]
+data = [int(n) for n in input()]
 
-out = [data[i] if i == 0 else data[i - 1] + data[i] for i, _ in enumerate(data)]
 
-print (out)
+def compute(i, arr):
+    if i == 0:
+        return arr[0]
+    result = 0
+    for j in range(0, i+1):
+        result += arr[j]
+    return result
+
+
+out = [compute(i, data) for i, _ in enumerate(data)]
+
+print(out)
