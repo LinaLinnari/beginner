@@ -174,3 +174,47 @@
 # n = [int(x) for x in input()]
 # print([sum(n[0:x + 1]) if x >= 1 else n[0] for x in range(len(n))])
 # ###################################
+#
+# print([int(num) for num in str(input()) if int(num) % 2])
+# ###########
+# user_input = input()
+#
+# odd_numbers = [int(i) for i in user_input if int(i) % 2 != 0]
+#
+# print(odd_numbers)
+# ##########################
+# text = ["function", "is", "a", "synonym", "of", "occupation"]
+# words_tion = [word for word in text if word.endswith("tion")]
+# print(words_tion)  # ["function", "occupation"]
+#########
+# words = ["apple", "pear", "banana", "Ananas"]
+# word_a = [word for word in words if word.startswith(("a", "A"))]
+# print(word_a)
+###############################################
+# my_numbers = [int(x) for x in input().split(" ")]
+# odd_numbers = [i for i in my_numbers if i % 2 == 0]
+# print(odd_numbers)
+############################################
+# old_list = [int(num) for num in input().split()]
+# binary_list = [1 if num > 0 else 0 for num in old_list]
+# print(binary_list)
+###############################################
+# seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
+# days = [i // (60 * 60 * 24) for i in seconds]
+# print(days)
+#############################################
+# digits_list = [float(x) for x in input()]
+# print(sum(digits_list) / len(digits_list))
+# Учитывая числовую последовательность на входе, создайте список, в котором каждое число будет цифрой из этой
+# входной строки. Затем используйте этот список для вычисления среднего арифметического, то есть суммы всех
+# цифр, деленной на их общее количество
+##################################################
+# nums = [x for x in range(1, 1001) if x % 3 == 0]
+# print(nums)
+###########################################
+# vowels = 'aeiou'
+# string = input()
+# new_list = [each for each in string if each in vowels]
+# print(new_list)
+# Прочтите строку из ввода и распечатайте список гласных, принадлежащих этой строке.
+########################################################
