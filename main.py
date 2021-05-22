@@ -286,86 +286,75 @@
 #
 # else:
 #     print("Impossible")
-# #########
-# incells = input('Enter cells: ')
 #
-# print("---------" + '\n' +
-#       '|' + ' ' + incells[0] + ' ' + incells[1] + ' ' + incells[2] + ' ' + '|' + '\n'
-#                                                                                  '|' + ' ' + incells[3] + ' ' + incells[
-#           4] + ' ' + incells[5] + ' ' + '|' + '\n'
-#                                               '|' + ' ' + incells[6] + ' ' + incells[7] + ' ' + incells[
-#           8] + ' ' + '|' + '\n'
-#       + "---------")
-# if incells == "XXXOO__O_" or incells == "XOXOXOXXO":
-#     print("X wins")
-#
-# elif incells == "XOOOXOXXO":
-#     print("O wins")
-#
-#
-# elif incells == "XOXOOXXXO":
-#     print("Draw")
-#
-# elif incells == "XO_OOX_X_":
-#     print("Game not finished")
-#
-# else:
-#     print("Impossible")
 # ##########
-user_input = input()
-user_input = list(user_input)
-print("---------")
-print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
-print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
-print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
-print("---------")
+# user_input = input()
+# user_input = list(user_input)
+# print("---------")
+# print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
+# print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
+# print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
+# print("---------")
+#
+# input_matrix = [
+#     [user_input[0], user_input[1], user_input[2]],
+#     [user_input[3], user_input[4], user_input[5]],
+#     [user_input[6], user_input[7], user_input[8]]
+# ]
+#
+# only_x = [_ for _ in user_input if _ == "X"]
+# only_o = [_ for _ in user_input if _ == "O"]
+# only_empty = [x for x in user_input if x == "_"]
+# x_wins = 0
+# o_wins = 0
+# total_wins = 0
+#
+# for i in range(3):
+#     if input_matrix[0][i] == input_matrix[1][i] == input_matrix[2][i]:
+#         total_wins += 1
+#         if input_matrix[0][i] == "X":
+#             x_wins += 1
+#         else:
+#             o_wins += 1
+#     if input_matrix[i][0] == input_matrix[i][1] == input_matrix[i][2]:
+#         total_wins += 1
+#         if input_matrix[i][0] == "X":
+#             x_wins += 1
+#         else:
+#             o_wins += 1
+# if input_matrix[0][0] == input_matrix[1][1] == input_matrix[2][2]:
+#     total_wins += 1
+#     if input_matrix[1][1] == "X":
+#         x_wins += 1
+#     else:
+#         o_wins += 1
+#
+# if input_matrix[0][2] == input_matrix[1][1] == input_matrix[2][0]:
+#     total_wins += 1
+#     if input_matrix[1][1] == "X":
+#         x_wins += 1
+#     else:
+#         o_wins += 1
+# if abs(len(only_x) - len(only_o)) >= 2:
+#     print("Impossible")
+# elif total_wins > 1:
+#     print("Impossible")
+# elif total_wins == 0 and len(only_empty) == 0:
+#     print("Draw")
+# elif x_wins == 1:
+#     print("X wins")
+# elif o_wins == 1:
+#     print("O wins")
+# elif total_wins == 0 and len(only_empty) > 0:
+#     print("Game not finished")
 
-input_matrix = [[user_input[0], user_input[1], user_input[2]],
-               [user_input[3], user_input[4], user_input[5]],
-               [user_input[6], user_input[7], user_input[8]]]
-
-only_x = [_ for _ in user_input if _ == "X"]
-only_o = [_ for _ in user_input if _ == "O"]
-only_empty = [x for x in user_input if x == "_"]
-x_wins = 0
-o_wins = 0
-total_wins = 0
-
-for i in range(3):
-    if input_matrix[0][i] == input_matrix[1][i] == input_matrix[2][i]:
-        total_wins += 1
-        if input_matrix[0][i] == "X":
-            x_wins += 1
-        else:
-            o_wins += 1
-    if input_matrix[i][0] == input_matrix[i][1] == input_matrix[i][2]:
-        total_wins += 1
-        if input_matrix[i][0] == "X":
-            x_wins += 1
-        else:
-            o_wins += 1
-if input_matrix[0][0] == input_matrix[1][1] == input_matrix[2][2]:
-    total_wins += 1
-    if input_matrix[1][1] == "X":
-        x_wins += 1
-    else:
-        o_wins += 1
-
-if input_matrix[0][2] == input_matrix[1][1] == input_matrix[2][0]:
-    total_wins += 1
-    if input_matrix[1][1] == "X":
-        x_wins += 1
-    else:
-        o_wins += 1
-if abs(len(only_x) - len(only_o)) >= 2:
-    print("Impossible")
-elif total_wins > 1:
-    print("Impossible")
-elif total_wins == 0 and len(only_empty) == 0:
-    print("Draw")
-elif x_wins == 1:
-    print("X wins")
-elif o_wins == 1:
-    print("O wins")
-elif total_wins == 0 and len(only_empty) > 0:
-    print("Game not finished")
+matrix = [
+    [1, None, 'x', 'o', 1],
+    [None, 'x', 'o', 1, 2],
+    [None, 'x', 'o', 1, 3]
+]
+for i, line in enumerate(matrix):
+    for j, value in enumerate(line):
+        if value is not None and type(value) is not str:
+            matrix[i][j] = value + 1
+    print(line)
