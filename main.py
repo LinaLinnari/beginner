@@ -312,60 +312,141 @@
 # else:
 #     print("Impossible")
 # ##########
-user_input = input()
-user_input = list(user_input)
-print("---------")
-print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
-print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
-print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
-print("---------")
+# user_input = input()
+# user_input = list(user_input)
+# print("---------")
+# print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
+# print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
+# print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
+# print("---------")
+#
+# input_matrix = [[user_input[0], user_input[1], user_input[2]],
+#                [user_input[3], user_input[4], user_input[5]],
+#                [user_input[6], user_input[7], user_input[8]]]
+#
+# only_x = [_ for _ in user_input if _ == "X"]
+# only_o = [_ for _ in user_input if _ == "O"]
+# only_empty = [x for x in user_input if x == "_"]
+# x_wins = 0
+# o_wins = 0
+# total_wins = 0
+#
+# for i in range(3):
+#     if input_matrix[0][i] == input_matrix[1][i] == input_matrix[2][i]:
+#         total_wins += 1
+#         if input_matrix[0][i] == "X":
+#             x_wins += 1
+#         else:
+#             o_wins += 1
+#     if input_matrix[i][0] == input_matrix[i][1] == input_matrix[i][2]:
+#         total_wins += 1
+#         if input_matrix[i][0] == "X":
+#             x_wins += 1
+#         else:
+#             o_wins += 1
+# if input_matrix[0][0] == input_matrix[1][1] == input_matrix[2][2]:
+#     total_wins += 1
+#     if input_matrix[1][1] == "X":
+#         x_wins += 1
+#     else:
+#         o_wins += 1
+#
+# if input_matrix[0][2] == input_matrix[1][1] == input_matrix[2][0]:
+#     total_wins += 1
+#     if input_matrix[1][1] == "X":
+#         x_wins += 1
+#     else:
+#         o_wins += 1
+# if abs(len(only_x) - len(only_o)) >= 2:
+#     print("Impossible")
+# elif total_wins > 1:
+#     print("Impossible")
+# elif total_wins == 0 and len(only_empty) == 0:
+#     print("Draw")
+# elif x_wins == 1:
+#     print("X wins")
+# elif o_wins == 1:
+#     print("O wins")
+# elif total_wins == 0 and len(only_empty) > 0:
+#     print("Game not finished")
+# ###############################################################
+# print('''
+# '
+# '"'
+# '"'"'
+# '"'"'"'
+# ''')
+#############################################
+# n = int(input())
+# k = int(input())
+# it = k % n
+# print(it)
+# #####################################################
+# print('You\nare\nthe\nbest\nprogrammer!')
+##################################################
+# print(len(repr('That is \n mine')))
+# Напишите программу, которая будет печатать длину печатаемого представления строки 'That is \n mine'.
+#################################################
+# x = "global"
+# def outer():
+#     x = "outer local"
+#     def inner():
+#         x = "inner local"
+#         def func():
+#             x = "func local"
+#             print(x)
+#         func()
+#     inner()
+#
+# outer()  # "func local"
+# x = "global"
+# def outer():
+#     x = "outer local"
+#     def inner():
+#         x = "inner local"
+#         def func():
+#             print(x)
+#         func()
+#     inner()
+#
+# outer()  # "inner local"
+# x, y = 1, 2
+#
+# def foo():
+#     global y
+#     if y == 2:
+#         x = 2
+#         y = 1
+#
+# foo()
+# print(x)
+# if y == 1:
+#     x = 3
+# print(x)
+###############################
+# message = "bonjour and welcome to Paris!"
+# print(message.replace("Paris", "Lyon"))
+# replaced_message = message.replace("o", "!", 2)
+# print(replaced_message)
+##########################
+import re
 
-input_matrix = [[user_input[0], user_input[1], user_input[2]],
-               [user_input[3], user_input[4], user_input[5]],
-               [user_input[6], user_input[7], user_input[8]]]
+inp_str = input()
+opt = re.sub(r"[^\w\s]", '', inp_str)
 
-only_x = [_ for _ in user_input if _ == "X"]
-only_o = [_ for _ in user_input if _ == "O"]
-only_empty = [x for x in user_input if x == "_"]
-x_wins = 0
-o_wins = 0
-total_wins = 0
+s = re.sub(r"\s"{2,},' ', opt)
+#Help! Help! I’m being repressed!
+print(str.lower(s))
+# re.sub(r"[^a-zA-Z0-9]","",s)
+###########
+# a = input()
+# a1 = a.replace("!", " ")
+# a2 = a1.replace("?", " ")
+# a3 = a2.replace(",", " ")
+# a4 = a3.replace(".", " ")
+# while a4.find('  ') != -1:
+#     a4 = a4.replace('  ', ' ')
+#
+# print(str.lower(a4))
 
-for i in range(3):
-    if input_matrix[0][i] == input_matrix[1][i] == input_matrix[2][i]:
-        total_wins += 1
-        if input_matrix[0][i] == "X":
-            x_wins += 1
-        else:
-            o_wins += 1
-    if input_matrix[i][0] == input_matrix[i][1] == input_matrix[i][2]:
-        total_wins += 1
-        if input_matrix[i][0] == "X":
-            x_wins += 1
-        else:
-            o_wins += 1
-if input_matrix[0][0] == input_matrix[1][1] == input_matrix[2][2]:
-    total_wins += 1
-    if input_matrix[1][1] == "X":
-        x_wins += 1
-    else:
-        o_wins += 1
 
-if input_matrix[0][2] == input_matrix[1][1] == input_matrix[2][0]:
-    total_wins += 1
-    if input_matrix[1][1] == "X":
-        x_wins += 1
-    else:
-        o_wins += 1
-if abs(len(only_x) - len(only_o)) >= 2:
-    print("Impossible")
-elif total_wins > 1:
-    print("Impossible")
-elif total_wins == 0 and len(only_empty) == 0:
-    print("Draw")
-elif x_wins == 1:
-    print("X wins")
-elif o_wins == 1:
-    print("O wins")
-elif total_wins == 0 and len(only_empty) > 0:
-    print("Game not finished")
