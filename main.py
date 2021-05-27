@@ -335,7 +335,7 @@
 #         x_wins += 1
 #     else:
 #         o_wins += 1
-# if abs(len(only_x) - len(only_o)) >= 2:
+# if abs(len(only_x) - len(only_o)) > 1:
 #     print("Impossible")
 # elif total_wins > 1:
 #     print("Impossible")
@@ -348,13 +348,41 @@
 # elif total_wins == 0 and len(only_empty) > 0:
 #     print("Game not finished")
 
+# matrix = [
+#     [1, None, 'x', 'o', 1],
+#     [None, 'x', 'o', 1, 2],
+#     [None, 'x', 'o', 1, 3]
+# ]
+# for i, line in enumerate(matrix):
+#     for j, value in enumerate(line):
+#         if value is not None and type(value) is not str:
+#             matrix[i][j] = value + 1
+#     print(line)
+
+
 matrix = [
-    [1, None, 'x', 'o', 1],
-    [None, 'x', 'o', 1, 2],
-    [None, 'x', 'o', 1, 3]
+    ['x', 'o', '_'],
+    ['o', '_', 'o'],
+    ['x', '_', 'o'],
 ]
-for i, line in enumerate(matrix):
-    for j, value in enumerate(line):
-        if value is not None and type(value) is not str:
-            matrix[i][j] = value + 1
+
+
+reference_matrix = [
+    matrix[0],
+    matrix[1],
+    matrix[2],
+    [i[0] for i in matrix],
+    [i[1] for i in matrix],
+    [i[2] for i in matrix],
+    [matrix[0][0], matrix[1][1], matrix[2][2]],
+    [matrix[0][2], matrix[1][1], matrix[2][0]]
+]
+
+
+for line in reference_matrix:
+    # print(i)
     print(line)
+    print(set(line))
+    # for j, el in enumerate(line):
+        # print(el)
+        # line[j] == el
