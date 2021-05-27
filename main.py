@@ -429,15 +429,15 @@
 # replaced_message = message.replace("o", "!", 2)
 # print(replaced_message)
 ##########################
-import re
-
-inp_str = input()
-opt = re.sub(r"[^\w\s]", '', inp_str)
-
-s = re.sub(r"\s"{2,},' ', opt)
-#Help! Help! I’m being repressed!
-print(str.lower(s))
-# re.sub(r"[^a-zA-Z0-9]","",s)
+# import re
+#
+# inp_str = input()
+# opt = re.sub(r"[^\w\s]", '', inp_str)
+#
+# s = re.sub(r"\s"{2,},' ', opt)
+# #Help! Help! I’m being repressed!
+# print(str.lower(s))
+# # re.sub(r"[^a-zA-Z0-9]","",s)
 ###########
 # a = input()
 # a1 = a.replace("!", " ")
@@ -448,5 +448,44 @@ print(str.lower(s))
 #     a4 = a4.replace('  ', ' ')
 #
 # print(str.lower(a4))
+###################################
+# text = input()
+# text = text.replace("o", " ")
+# text = text.split()
+# text = " o".join(text)
+# print(text)
+####
+# # b = "-".join(a) обеденить все части массива через знак
+# a = input().split('-')
+#
+# for val in a:
+#     print(val)
+###
+# a = input().split()
+# print(" ".join([i for i in reversed(a)]))
+####
+# a = int(input())
+# point = "#"
+# b = a * 2
+# for i in range(0, a):
+#     print(point.center(b))
+#     point += "##"
+##########
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
