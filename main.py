@@ -471,21 +471,30 @@
 #     print(point.center(b))
 #     point += "##"
 ##########
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# import string
+# a = input()
+# a1 = string.capwords(a, sep='_')
+# import re
+# a2 = re.sub('_', '', a1)
+# print(a2)
+# другое решение
+# s = input().split("_")
+# for word in s:
+#     word = word.capitalize()
+#     print("".join(word), end="")
+###
+# print(''.join(input().title().split('_')))
+########################################################
+# for word in input().split():
+#     if word.lower().startswith(('https://', 'http://', 'www.')):
+#         print(word)
+# #######
+# data = input().split()
+# addr = 'https://', 'http://', 'www.'
+#
+# for word in data:
+#     if word.lower().startswith(addr):
+#         print(word)
+#######
+# print("\n".join([word for word in input().split() if word.lower().startswith(('https://', 'http://', 'www.'))]))
+#######################################################
