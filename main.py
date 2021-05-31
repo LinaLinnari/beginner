@@ -506,5 +506,71 @@
 # else:
 #     print("Don't forget to take breaks!")
 #############
+input_x, input_y = int(input('enter x')),int(input('enter y'))
+
+# input_x = input('enter val')
+
+user_input = ['_', '_', '_', '_', '_', '_', '_', '_', '_']
+print("---------")
+print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
+print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
+print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
+print("---------")
+
+input_matrix = [[user_input[0], user_input[1], user_input[2]],
+                [user_input[3], user_input[4], user_input[5]],
+                [user_input[6], user_input[7], user_input[8]]]
+
+only_x = [_ for _ in user_input if _ == "X"]
+only_o = [_ for _ in user_input if _ == "O"]
+only_empty = [x for x in user_input if x == "_"]
+x_wins = 0
+o_wins = 0
+total_wins = 0
+
+for i in range(3):
+    if input_matrix[0][i] == input_matrix[1][i] == input_matrix[2][i]:
+        total_wins += 1
+        if input_matrix[0][i] == "X":
+            x_wins += 1
+        else:
+            o_wins += 1
+    if input_matrix[i][0] == input_matrix[i][1] == input_matrix[i][2]:
+        total_wins += 1
+        if input_matrix[i][0] == "X":
+            x_wins += 1
+        else:
+            o_wins += 1
+if input_matrix[0][0] == input_matrix[1][1] == input_matrix[2][2]:
+    total_wins += 1
+    if input_matrix[1][1] == "X":
+        x_wins += 1
+    else:
+        o_wins += 1
+
+if input_matrix[0][2] == input_matrix[1][1] == input_matrix[2][0]:
+    total_wins += 1
+    if input_matrix[1][1] == "X":
+        x_wins += 1
+    else:
+        o_wins += 1
+if abs(len(only_x) - len(only_o)) >= 2:
+    print("Impossible")
+elif total_wins > 1:
+    print("Impossible")
+elif total_wins == 0 and len(only_empty) == 0:
+    print("Draw")
+elif x_wins == 1:
+    print("X wins")
+elif o_wins == 1:
+    print("O wins")
+elif total_wins == 0 and len(only_empty) > 0:
+    print("Game not finished")
 
 
+def turn_set(x, y, val, matrix):
+    matrix[x][y] = val
+
+
+def turn_get(x, y, matrix):
+    return matrix[x][y]
