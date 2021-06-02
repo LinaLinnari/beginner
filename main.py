@@ -514,30 +514,50 @@ def show_matrix(matrix):
     print("| " + matrix[2][0] + " " + matrix[2][1] + " " + matrix[2][2] + " |")
     print("---------")
 
-# input_x, input_y = int(input('enter x')),int(input('enter y'))
 
-# input_x = input('enter val')
-numbers = [int(x) - 1 for x in input()]
-# print(numbers)
+def is_the_place_free(matrix, numbers):
+    try:
+        input_matrix[numbers[0]][numbers[1]] = 'X':
+            print("This cell is occupied! Choose another one!")
+    else:
 
 
-user_input = [' ', ' ', ' ', ' ', ' ', ' ', ' ', " ", ' ']
+
+user_input = ['_', '_', '_', '_', '_', '_', '_', "_", '_']
+input_matrix = [[user_input[0], user_input[1], user_input[2]],
+                [user_input[3], user_input[4], user_input[5]],
+                [user_input[6], user_input[7], user_input[8]]]
+
+show_matrix(input_matrix)
+def input_validation(numbers):
+    well = False
+    while not well:
+        try:
+            numbers = [int(x) - 1 for x in input('enter coordinates>>')]
+        except:
+            print('pizdec')
+            continue
+
+        if numbers[0] > 2 or numbers[0] < 0:
+            print("Coordinates should be from 1 to 3!")
+            continue
+        if numbers[0] > 2 or numbers[0] < 0:
+            print("Coordinates should be from 1 to 3!")
+            continue
+
+        break
+
+
+
+
 # print("---------")
+
 # print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
 # print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
 # print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
 # print("---------")
 
-input_matrix = [[user_input[0], user_input[1], user_input[2]],
-                [user_input[3], user_input[4], user_input[5]],
-                [user_input[6], user_input[7], user_input[8]]]
 input_matrix[numbers[0]][numbers[1]] = 'X'
-# print("---------")
-# for row in input_matrix:
-#     for elem in row:
-#         print(elem, end=' ')
-#     print()
-# print("---------")
 
 show_matrix(input_matrix)
 
@@ -586,8 +606,6 @@ elif o_wins == 1:
     print("O wins")
 elif total_wins == 0 and len(only_empty) > 0:
     print("Game not finished")
-
-
 
 # def turn_set(x, y, val, matrix):
 #     matrix[x][y] = val
