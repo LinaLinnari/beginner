@@ -506,20 +506,30 @@
 # else:
 #     print("Don't forget to take breaks!")
 #############
-input_x, input_y = int(input('enter x')),int(input('enter y'))
+# input_x, input_y = int(input('enter x')),int(input('enter y'))
 
 # input_x = input('enter val')
+numbers = [int(x) - 1 for x in input()]
+# print(numbers)
 
-user_input = ['_', '_', '_', '_', '_', '_', '_', '_', '_']
-print("---------")
-print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
-print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
-print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
-print("---------")
+
+user_input = [' ', ' ', ' ', ' ', ' ', ' ', ' ', " ", ' ']
+# print("---------")
+# print("| " + user_input[0] + " " + user_input[1] + " " + user_input[2] + " |")
+# print("| " + user_input[3] + " " + user_input[4] + " " + user_input[5] + " |")
+# print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
+# print("---------")
 
 input_matrix = [[user_input[0], user_input[1], user_input[2]],
                 [user_input[3], user_input[4], user_input[5]],
                 [user_input[6], user_input[7], user_input[8]]]
+input_matrix[numbers[0]][numbers[1]] = 'X'
+print("---------")
+for row in input_matrix:
+    for elem in row:
+        print(elem, end=' ')
+    print()
+print("---------")
 
 only_x = [_ for _ in user_input if _ == "X"]
 only_o = [_ for _ in user_input if _ == "O"]
@@ -568,9 +578,14 @@ elif total_wins == 0 and len(only_empty) > 0:
     print("Game not finished")
 
 
-def turn_set(x, y, val, matrix):
-    matrix[x][y] = val
 
-
-def turn_get(x, y, matrix):
-    return matrix[x][y]
+# def turn_set(x, y, val, matrix):
+#     matrix[x][y] = val
+#
+#
+# def turn_get(x, y, matrix):
+#     return matrix[x][y]
+# input_x, input_y = int(input('enter x')),int(input('enter y'))
+# numbers = [int(x) - 1 for x in input()]
+# print(numbers)
+#
