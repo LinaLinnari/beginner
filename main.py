@@ -506,6 +506,14 @@
 # else:
 #     print("Don't forget to take breaks!")
 #############
+
+def show_matrix(matrix):
+    print("---------")
+    print("| " + matrix[0][0] + " " + matrix[0][1] + " " + matrix[0][2] + " |")
+    print("| " + matrix[1][0] + " " + matrix[1][1] + " " + matrix[1][2] + " |")
+    print("| " + matrix[2][0] + " " + matrix[2][1] + " " + matrix[2][2] + " |")
+    print("---------")
+
 # input_x, input_y = int(input('enter x')),int(input('enter y'))
 
 # input_x = input('enter val')
@@ -524,12 +532,14 @@ input_matrix = [[user_input[0], user_input[1], user_input[2]],
                 [user_input[3], user_input[4], user_input[5]],
                 [user_input[6], user_input[7], user_input[8]]]
 input_matrix[numbers[0]][numbers[1]] = 'X'
-print("---------")
-for row in input_matrix:
-    for elem in row:
-        print(elem, end=' ')
-    print()
-print("---------")
+# print("---------")
+# for row in input_matrix:
+#     for elem in row:
+#         print(elem, end=' ')
+#     print()
+# print("---------")
+
+show_matrix(input_matrix)
 
 only_x = [_ for _ in user_input if _ == "X"]
 only_o = [_ for _ in user_input if _ == "O"]
