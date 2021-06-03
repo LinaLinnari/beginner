@@ -516,12 +516,10 @@ def show_matrix(matrix):
 
 
 def is_the_place_free(matrix, numbers):
-    try:
-        input_matrix[numbers[0]][numbers[1]] = 'X':
-            print("This cell is occupied! Choose another one!")
+    if input_matrix[numbers[0]][numbers[1]] = 'X':
+        print("This cell is occupied! Choose another one!")
     else:
-
-
+        print(show_matrix)
 
 user_input = ['_', '_', '_', '_', '_', '_', '_', "_", '_']
 input_matrix = [[user_input[0], user_input[1], user_input[2]],
@@ -529,13 +527,14 @@ input_matrix = [[user_input[0], user_input[1], user_input[2]],
                 [user_input[6], user_input[7], user_input[8]]]
 
 show_matrix(input_matrix)
+input_matrix[numbers[0]][numbers[1]] = 'X'
 def input_validation(numbers):
     well = False
     while not well:
         try:
             numbers = [int(x) - 1 for x in input('enter coordinates>>')]
         except:
-            print('pizdec')
+            print('You should enter numbers!')
             continue
 
         if numbers[0] > 2 or numbers[0] < 0:
@@ -557,7 +556,7 @@ def input_validation(numbers):
 # print("| " + user_input[6] + " " + user_input[7] + " " + user_input[8] + " |")
 # print("---------")
 
-input_matrix[numbers[0]][numbers[1]] = 'X'
+# input_matrix[numbers[0]][numbers[1]] = 'X'
 
 show_matrix(input_matrix)
 
