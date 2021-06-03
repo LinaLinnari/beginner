@@ -505,118 +505,183 @@
 #     print("This seems reasonable")
 # else:
 #     print("Don't forget to take breaks!")
-#############
-def input_validation(matrix):
-    while True:
-        try:
-            numbers = [int(x) - 1 for x in input('enter coordinates>>')]
-        except:
-            print('You should enter numbers!')
-            continue
+#################################################################
+###########
+#
+# def input_validation(matrix):
+#     while True:
+#         try:
+#             numbers = [int(x) - 1 for x in input('Enter the coordinates:')]
+#         except:
+#             print('You should enter numbers!')
+#             continue
+#
+#         if numbers[0] > 2 or numbers[0] < 0:
+#             print("Coordinates should be from 1 to 3!")
+#             continue
+#         if numbers[1] > 2 or numbers[1] < 0:
+#             print("Coordinates should be from 1 to 3!")
+#             continue
+#
+#         if not is_the_place_free(matrix, numbers):
+#             continue
+#
+#         print('move')
+#         matrix[numbers[0]][numbers[1]] = 'X'
+#         break
+#
+#
+# def show_matrix(matrix):
+#     print("---------")
+#     print("| " + matrix[0][0] + " " + matrix[0][1] + " " + matrix[0][2] + " |")
+#     print("| " + matrix[1][0] + " " + matrix[1][1] + " " + matrix[1][2] + " |")
+#     print("| " + matrix[2][0] + " " + matrix[2][1] + " " + matrix[2][2] + " |")
+#     print("---------")
+#
+#
+# def is_the_place_free(matrix, numbers):
+#     if matrix[numbers[0]][numbers[1]] != '_':
+#         print("This cell is occupied! Choose another one!")
+#         return False
+#     else:
+#         return True
+#         # show_matrix(matrix)
+#
+#
+# x_wins = 0
+# o_wins = 0
+# total_wins = 0
+#
+# # <=== START HERE =====
+# user_input = input('Enter cells:')
+# user_input = list(user_input)
+# print(user_input)
+# # user_input = ['_', '_', '_', '_', '_', '_', '_', "_", '_']
+# input_matrix = [[user_input[0], user_input[1], user_input[2]],
+#                 [user_input[3], user_input[4], user_input[5]],
+#                 [user_input[6], user_input[7], user_input[8]]]
+#
+# show_matrix(input_matrix)
+#
+# while True:
+#     input_validation(input_matrix)
+#
+#     only_x = [_ for _ in user_input if _ == "X"]
+#     only_o = [_ for _ in user_input if _ == "O"]
+#     only_empty = [x for x in user_input if x == "_"]
+#
+#     show_matrix(input_matrix)
+#
+#     # check game state
+#     for i in range(3):
+#         if input_matrix[0][i] == input_matrix[1][i] == input_matrix[2][i]:
+#             total_wins += 1
+#             if input_matrix[0][i] == "X":
+#                 x_wins += 1
+#             else:
+#                 o_wins += 1
+#         if input_matrix[i][0] == input_matrix[i][1] == input_matrix[i][2]:
+#             total_wins += 1
+#             if input_matrix[i][0] == "X":
+#                 x_wins += 1
+#             else:
+#                 o_wins += 1
+#     if input_matrix[0][0] == input_matrix[1][1] == input_matrix[2][2]:
+#         total_wins += 1
+#         if input_matrix[1][1] == "X":
+#             x_wins += 1
+#         else:
+#             o_wins += 1
+#
+#     if input_matrix[0][2] == input_matrix[1][1] == input_matrix[2][0]:
+#         total_wins += 1
+#         if input_matrix[1][1] == "X":
+#             x_wins += 1
+#         else:
+#             o_wins += 1
+#     if abs(len(only_x) - len(only_o)) >= 2:
+#         print("Impossible")
+#     elif total_wins > 1:
+#         print("Impossible")
+#     elif total_wins == 0 and len(only_empty) == 0:
+#         print("Draw")
+#         break  # game end
+#     elif x_wins == 1:
+#         print("X wins")
+#         break  # game end
+#     elif o_wins == 1:
+#         print("O wins")
+#         break  # game end
+#     elif total_wins == 0 and len(only_empty) > 0:
+#         print("Game not finished")
+#
+#
+# ######################
+# command = input("Enter cells: ")
+# command = command.replace("_", " ")
+# def tictac_toe(command):
+#     global grid
+#     print("---------")
+#     print("| " + command[0] + " " + command[1] + " " + command[2] + " |")
+#     print("| " + command[3] + " " + command[4] + " " + command[5] + " |")
+#     print("| " + command[6] + " " + command[7] + " " + command[8] + " |")
+#     print("---------")
+# tictac_toe(command)
+# right_data = False
+# def add_coordinates():
+#     global command
+#     global right_data
+#     new_input = input("Enter the coordinates: ").split()
+#     if new_input[0].isalpha() or new_input[1].isalpha():
+#         print("You should enter numbers!")
+#         return
+#     elif  not 0 < int(new_input[0]) < 4 or  not 0 < int(new_input[1]) < 4:
+#         print("Coordinates should be from 1 to 3!")
+#         return
+#     elif command[(int(new_input[1]) - 1) + ((3 * int(new_input[0])) - 3)] == "X" or command[(int(new_input[1]) - 1) + ((3 * int(new_input[0])) - 3)] == "O":
+#         print("This cell is occupied! Choose another one!")
+#         return
+#     else:
+#         index = (int(new_input[1]) - 1) + ((3 * int(new_input[0])) - 3)
+#         new_command = [dot for dot in command]
+#         new_command.pop(index)
+#         new_command.insert(index, "X")
+#         command ="".join(new_command)
+#         tictac_toe(command)
+#         right_data = True
+#         return right_data
+#
+# while not right_data:
+#     add_coordinates()
+#######################################
+Input = input('Enter cells: ')
+a, b, c, e, f, g = Input[:3], Input[3:6], Input[6:], Input[::3], Input[1::3], Input[2::3]
+print('---------\n|', *a, '|\n|', *b, '|\n|', *c, '|\n---------')
 
-        if numbers[0] > 2 or numbers[0] < 0:
-            print("Coordinates should be from 1 to 3!")
-            continue
-        if numbers[0] > 2 or numbers[0] < 0:
-            print("Coordinates should be from 1 to 3!")
-            continue
+Cood = []
+for i in range(1, 4):
+  for j in range(1, 4):
+    Cood.append((i, j))
 
-        if not is_the_place_free(matrix, numbers):
-            continue
-
-        print('move')
-        matrix[numbers[0]][numbers[1]] = 'X'
-        break
-
-
-def show_matrix(matrix):
-    print("---------")
-    print("| " + matrix[0][0] + " " + matrix[0][1] + " " + matrix[0][2] + " |")
-    print("| " + matrix[1][0] + " " + matrix[1][1] + " " + matrix[1][2] + " |")
-    print("| " + matrix[2][0] + " " + matrix[2][1] + " " + matrix[2][2] + " |")
-    print("---------")
-
-
-def is_the_place_free(matrix, numbers):
-    if matrix[numbers[0]][numbers[1]] != '_':
-        print("This cell is occupied! Choose another one!")
-        return False
+Cood = list(zip(Input, Cood))
+H = True
+while '_' in Input and H:
+    A, B = input('Enter the coordinates: ').split()
+    if A.isdigit() and B.isdigit():
+        C = int(A), int(B)
+        A, B = C
+        if A not in [1, 2, 3] or B not in [1, 2, 3]:
+            print('Coordinates should be from 1 to 3!')
+        else:
+            for i in Cood:
+                if C in i:
+                    if i[0] != '_':
+                        print('This cell is occupied! Choose another one!')
+                    else:
+                        Input = list(Input)
+                        Input[Cood.index(i)] = 'X'
+                        Input = ''.join(Input)
+                        print('---------\n|', *Input[:3], '|\n|', *Input[3:6], '|\n|', *Input[6:], '|\n---------')
+                        H = False
     else:
-        return True
-        # show_matrix(matrix)
-
-
-x_wins = 0
-o_wins = 0
-total_wins = 0
-
-# <=== START HERE =====
-user_input = ['_', '_', '_', '_', '_', '_', '_', "_", '_']
-input_matrix = [[user_input[0], user_input[1], user_input[2]],
-                [user_input[3], user_input[4], user_input[5]],
-                [user_input[6], user_input[7], user_input[8]]]
-
-show_matrix(input_matrix)
-
-while True:
-    input_validation(input_matrix)
-
-    only_x = [_ for _ in user_input if _ == "X"]
-    only_o = [_ for _ in user_input if _ == "O"]
-    only_empty = [x for x in user_input if x == "_"]
-
-    show_matrix(input_matrix)
-
-    # check game state
-    for i in range(3):
-        if input_matrix[0][i] == input_matrix[1][i] == input_matrix[2][i]:
-            total_wins += 1
-            if input_matrix[0][i] == "X":
-                x_wins += 1
-            else:
-                o_wins += 1
-        if input_matrix[i][0] == input_matrix[i][1] == input_matrix[i][2]:
-            total_wins += 1
-            if input_matrix[i][0] == "X":
-                x_wins += 1
-            else:
-                o_wins += 1
-    if input_matrix[0][0] == input_matrix[1][1] == input_matrix[2][2]:
-        total_wins += 1
-        if input_matrix[1][1] == "X":
-            x_wins += 1
-        else:
-            o_wins += 1
-
-    if input_matrix[0][2] == input_matrix[1][1] == input_matrix[2][0]:
-        total_wins += 1
-        if input_matrix[1][1] == "X":
-            x_wins += 1
-        else:
-            o_wins += 1
-    if abs(len(only_x) - len(only_o)) >= 2:
-        print("Impossible")
-    elif total_wins > 1:
-        print("Impossible")
-    elif total_wins == 0 and len(only_empty) == 0:
-        print("Draw")
-        break  # game end
-    elif x_wins == 1:
-        print("X wins")
-        break  # game end
-    elif o_wins == 1:
-        print("O wins")
-        break  # game end
-    elif total_wins == 0 and len(only_empty) > 0:
-        print("Game not finished")
-
-# def turn_set(x, y, val, matrix):
-#     matrix[x][y] = val
-#
-#
-# def turn_get(x, y, matrix):
-#     return matrix[x][y]
-# input_x, input_y = int(input('enter x')),int(input('enter y'))
-# numbers = [int(x) - 1 for x in input()]
-# print(numbers)
-#
+        print('You should enter numbers!')
